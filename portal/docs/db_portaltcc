@@ -1,0 +1,19 @@
+CREATE TABLE tb_usuarios(
+	id_usuario integer NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(40) NOT NULL,
+	email VARCHAR(40) NOT NULL,
+	telefone varchar(13),
+	senha VARCHAR(40) NOT NULL,
+	bio text,
+	PRIMARY KEY (id_usuario)
+);
+
+CREATE TABLE tb_trabalhos(
+	id_trabalho integer NOT NULL AUTO_INCREMENT,
+	id_usuario integer NOT NULL,
+	nome varchar(100) NOT NULL,
+	descricao text NOT NULL,
+	token varchar(10) UNIQUE NOT NULL,
+	PRIMARY KEY (id_trabalho),
+	FOREIGN KEY (id_usuario) REFERENCES tb_usuarios(id_usuario)
+);
