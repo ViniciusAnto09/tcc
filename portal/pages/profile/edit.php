@@ -17,6 +17,9 @@ $query = "update tb_usuarios set
 
 $result = mysql_query($query);
 
+session_start();
+
+$_SESSION['nome'] = $nome;
 
 if ($result){
 	print ('<script> location.href = "../../index.php?page=30" </script>');

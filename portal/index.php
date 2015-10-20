@@ -105,7 +105,6 @@ include ('scripts/pages.php');
                             <ul>
                                 <li><a href="index.php?page=10">Trabalhos Cadastrados</a></li>
                                 <li><a href="index.php?page=10.1">Cadastrar Trabalho</a></li>
-                                <li><a href="form-examples.html">Incluir Andamento</a></li>
                                 <li><a href="form-examples.html">Visualizar Orientações</a></li>
                                 <li><a href="form-validations.html">Visualizar Colaboradores</a></li>
                             </ul>
@@ -114,6 +113,7 @@ include ('scripts/pages.php');
                             <a href=""><i class="zmdi zmdi-layers"></i> Colaborar</a>
 
                             <ul>
+                                <li><a href="index.php?page=40">Fazer uma Colaboração</a></li>
                                 <li><a href="form-elements.html">Procurar Trabalhos</a></li>
                                 <li><a href="form-components.html">Minhas Colaborações</a></li>
                             </ul>

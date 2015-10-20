@@ -68,7 +68,7 @@
 
 	elseif($page == 30.1){
 		if ($_SESSION['valid'] == true){
-			$page = 'pages/profile/form-edit.php';
+			$page = 'pages/profile/form_edit.php';
 		}
 		else{
 			print("<script>location.href = 'pages/login/login.php';</script>");
@@ -78,6 +78,15 @@
 	elseif($page == 30.2){
 		if ($_SESSION['valid'] == true){
 			$page = 'pages/profile/edit.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/progress/form_edit.php';
 		}
 		else{
 			print("<script>location.href = 'pages/login/login.php';</script>");
