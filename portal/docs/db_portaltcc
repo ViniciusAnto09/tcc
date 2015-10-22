@@ -17,3 +17,8 @@ CREATE TABLE tb_trabalhos(
 	PRIMARY KEY (id_trabalho),
 	FOREIGN KEY (id_usuario) REFERENCES tb_usuarios(id_usuario)
 );
+
+CREATE TABLE tb_colaboracao(
+	id_colaboracao integer NOT NULL AUTO_INCREMENT,
+
+);

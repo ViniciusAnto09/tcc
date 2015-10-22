@@ -22,7 +22,7 @@
 		$email = anti_sql($email);
 		$password = anti_sql($password);
 		
-		$query = "select * from tb_usuarios where (email = '$email') and (senha = '$password')";
+		$query = "select * from tb_usuario where (email = '$email') and (senha = '$password')";
 		$results = mysql_query($query);
 		if(mysql_num_rows($results) == 1){
 			$_SESSION['valid'] = true;

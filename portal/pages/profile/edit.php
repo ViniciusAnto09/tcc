@@ -8,7 +8,7 @@ $email		= $_POST['email'];
 $telefone	= $_POST['telefone'];
 $bio 		= $_POST['bio'];
 
-$query = "update tb_usuarios set
+$query = "update tb_usuario set
 		nome = '$nome',
 		email = '$email',
 		telefone = '$telefone',
@@ -26,6 +26,6 @@ if ($result){
 }
 else {
 	print ('<script> alert ("FALHA AO EDITAR DADOS!"); </script>');
-	print ('<script> location.href = "../../../index.php?page=30" </script>');
+	print ('<script> location.href = "../../index.php?page=30" </script>');
 }
 ?>

@@ -86,7 +86,34 @@
 
 	elseif($page == 40){
 		if ($_SESSION['valid'] == true){
-			$page = 'pages/progress/form_edit.php';
+			$page = 'pages/colaborations/form_search.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40.1){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/colaborations/search.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40.2){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/colaborations/choice.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40.3){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/colaborations/collaborate.php';
 		}
 		else{
 			print("<script>location.href = 'pages/login/login.php';</script>");

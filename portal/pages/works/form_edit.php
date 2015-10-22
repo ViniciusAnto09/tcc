@@ -1,6 +1,6 @@
 <?php
     $id = $_GET['id_trabalho'];
-    $sql = "select * from tb_trabalhos where (id_trabalho = $id)";
+    $sql = "select * from tb_trabalho where (id_trabalho = $id)";
     $result = mysql_fetch_array ( mysql_query( $sql ) );
 ?>  
 

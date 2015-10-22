@@ -1,12 +1,17 @@
 <div class="block-header">
     <br>
-    <h2>Trabalhos Cadastrados</h2>
+    <h2>Colaborações</h2>
     <br>
 </div>
 <?php
     $usuario = $_SESSION['id_usuario'];
+    
 
-    $sql = "select * from tb_trabalho where (id_usuario = '$usuario')";
+    $sql = "select * from tb_usuario_trabalho 
+                            inner join tb_trabalho
+                            on (tb_usuario_trabalho.id_trabalho= tb_trabalho.id_trabalho) 
+                            where (tb_usuario_trabalho.id_usuario = '$usuario')
+                            and tb_trabalho.id_usuario != '$usuario' ";
     $search_query = mysql_query($sql);
     while($select = mysql_fetch_array($search_query)){
         $id = $select["id_trabalho"];
@@ -27,9 +32,7 @@
                                 print('<li>');
                                     print('<a href=index.php?page=10.3&id_trabalho='.$id.'>Editar</a>');
                                 print('</li>');
-                                print('<li>');
-                                    print('<a href=index.php?page=10.4&id_trabalho='.$id.'>Excluir</a>');
-                                print('</li>');
+                                
                             print('</ul>');
                         print('</li>');
                     print('</ul>');

@@ -1,5 +1,6 @@
 <?php
 	include('scripts/connection.php');
+	$usuario = $_SESSION['id_usuario'];
 
 	function geraToken($tamanho = 8, $maiusculas = true, $numeros = true, $simbolos = false){
 		$lmin = 'abcdefghijklmnopqrstuvwxyz';
@@ -20,17 +21,34 @@
 		return $retorno;
 	}
 
-	$usuario = $_SESSION['id_usuario'];
+
 	$titulo = $_POST['titulo'];
 	$descricao = $_POST['descricao'];
 	$token = geraToken(10);
-	
-	$query = "insert into tb_trabalhos (id_trabalho, id_usuario, nome, descricao, token)
-			  values (null, '".$usuario."', '".$titulo."', '".$descricao."', '".$token."')";
-		
+
+	$query = "insert into tb_trabalho (id_trabalho, id_usuario, nome, descricao, token)
+	values (null, '".$usuario."', '".$titulo."', '".$descricao."', '".$token."')";
+
 	$result = mysql_query($query);
-	
-	if ($result){
-		print ('<script> location.href = "index.php?page=10" </script>');
+
+
+
+	$query = "select * from tb_trabalho where (id_usuario = '$usuario') order by id_trabalho desc limit 1 ";
+	$results = mysql_query($query);
+	if(mysql_num_rows($results) == 1){
+		$select = mysql_fetch_array($results);
+		$usuario = $select['id_usuario'];
+		$trabalho = $select['id_trabalho'];
+		$query = "insert into tb_usuario_trabalho (id_usuario, id_trabalho)
+		values ('".$usuario."', '".$trabalho."')";
+		$result = mysql_query($query);
+
+		if ($result){
+			print ('<script> location.href = "index.php?page=10" </script>');
+		}
+		
+		
 	}
+
+
 ?>

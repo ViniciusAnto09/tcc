@@ -6,7 +6,7 @@
 	$nome = $_POST['titulo'];
 	$descricao = $_POST['descricao'];
 
-	$query = "update tb_trabalhos set
+	$query = "update tb_trabalho set
 				 nome = '$nome',
 				 descricao = '$descricao'
 	  		 where (id_trabalho = $id)";

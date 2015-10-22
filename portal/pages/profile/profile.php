@@ -1,6 +1,6 @@
 <?php
 $id = $_SESSION['id_usuario'];
-$sql = "select * from tb_usuarios where (id_usuario = $id)";
+$sql = "select * from tb_usuario where (id_usuario = $id)";
 $result = mysql_fetch_array ( mysql_query( $sql ) );
 ?>
 <div class="block-header">
