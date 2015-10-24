@@ -26,13 +26,6 @@ $result = mysql_fetch_array ( mysql_query( $sql ) );
 
 <div class="card" id="profile-main">
     <div class="pm-overview c-overflow">
-        <div class="pmo-pic">
-
-            <div class="pmo-stat">
-                <h2 class="m-0 c-white">0</h2>
-                Colaboradores
-            </div>
-        </div>
 
         <div class="pmo-block pmo-contact hidden-xs">
             <h2>Informações de Contato</h2>
@@ -52,26 +45,6 @@ $result = mysql_fetch_array ( mysql_query( $sql ) );
             <li class="active waves-effect"><a href="profile-about.html">Minhas Informações</a></li>
 
         </ul>
-
-        <div class="pmb-block">
-            <div class="pmbb-header">
-                <h2><i class="zmdi zmdi-phone m-r-5"></i> Informações de Contato</h2>
-            </div>
-            <div class="pmbb-body p-l-30">
-                <div class="pmbb-view">
-                    <dl class="dl-horizontal">
-                        <dt>Telefone</dt>
-                        <dd><?= $result['nome']; ?></dd>
-                    </dl>
-                    <dl class="dl-horizontal">
-                        <dt>Email</dt>
-                        <dd><?= $result['email']; ?></dd>
-                    </dl>
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="pmb-block">
             <div class="pmbb-header">

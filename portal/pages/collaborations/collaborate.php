@@ -16,6 +16,7 @@
     while($select = mysql_fetch_array($search_query)){
         $id = $select["id_trabalho"];
         $nome = $select["nome"];
+        $nomeTrabalho = htmlspecialchars($nome);
         $descricao = nl2br($select["descricao"]);
         $token = $select["token"];
         print('<div class="col-sm-4">');
@@ -30,7 +31,9 @@
 
                             print('<ul class="dropdown-menu dropdown-menu-right">');
                                 print('<li>');
-                                    print('<a href=index.php?page=10.3&id_trabalho='.$id.'>Editar</a>');
+                                ?>
+                                    <a href="index.php?page=40.4&id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>">Colaborar</a>
+                                <?php
                                 print('</li>');
                                 
                             print('</ul>');
