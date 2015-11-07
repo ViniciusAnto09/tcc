@@ -11,7 +11,7 @@
 
     <link rel="icon" href="img/favicon.png">
 
-    <title>Portal do TCC</title>
+    <title>Portal dos Trabalhos Acadêmico</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Portal dos Trabalhos academicos</h1>
+            <h1>Portal dos Trabalhos Acadêmicos</h1>
             <h3>Tenha controle das atividades do seu trabalho</h3>
             <br>
             <a href="../portal/pages/login/login.php" class="btn btn-dark btn-lg">Entrar</a>
@@ -69,7 +69,7 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
+    <!-- <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -78,17 +78,19 @@
                 </div>
             </div>
             <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+      <!--   </div>
+        /.container
+    </section> - -->
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="services" class="services bg-primary">
+       
         <div class="container">
+        <center>
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
+                    <h2>Funções do sistema</h2>
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
@@ -98,10 +100,10 @@
                                 <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Controlar</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>Facilita o controle dos seus trabalhos Acadêmicos.</p>
+                              
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -111,10 +113,11 @@
                                 <i class="fa fa-compass fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Monitorar</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>Ajuda os professores a ter um melhor monitoramento no andamento do trabalhos que foram aplicados
+                                para seus alunos.</p>
+                               
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -124,10 +127,10 @@
                                 <i class="fa fa-flask fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Colaboração</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>Permite que qualquer aluno ou professor colabore e ajude nos desenvolvimentos dos trabalhos.</p>
+                                
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -137,10 +140,10 @@
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>Interatividade</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>Permite que alunos de variados cursos desenvolvam um trabalho em conjunto.</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -149,18 +152,20 @@
                 <!-- /.col-lg-10 -->
             </div>
             <!-- /.row -->
+            </center>
         </div>
         <!-- /.container -->
+
     </section>
 
-    <!-- Callout -->
-    <aside class="callout">
+    
+    <!-- <aside class="callout">
         <div class="text-vertical-center">
             <h1>Vertically Centered Text</h1>
         </div>
     </aside>
 
-    <!-- Portfolio -->
+    
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
@@ -197,17 +202,17 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
+                   
                     <a href="#" class="btn btn-dark">View More Items</a>
                 </div>
-                <!-- /.col-lg-10 -->
+              
             </div>
-            <!-- /.row -->
+           
         </div>
-        <!-- /.container -->
+     
     </section>
 
-    <!-- Call to Action -->
+    
     <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
@@ -222,7 +227,7 @@
 
     
 
-    <!-- Footer -->
+   
     <footer>
         <div class="container">
             <div class="row">
@@ -252,7 +257,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>  -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

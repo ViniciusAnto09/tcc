@@ -57,6 +57,15 @@
 		}
 	}
 
+	elseif($page == 10.6){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/works/delete_confirm.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
 	elseif($page == 10.5){
 		if ($_SESSION['valid'] == true){
 			$page = 'pages/works/collaborations.php';
@@ -132,6 +141,24 @@
 	elseif($page == 40.4){
 		if ($_SESSION['valid'] == true){
 			$page = 'pages/collaborations/collaborations.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40.5){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/collaborations/form_colaborate.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40.6){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/collaborations/submit.php';
 		}
 		else{
 			print("<script>location.href = 'pages/login/login.php';</script>");

@@ -32,7 +32,7 @@
                             print('<ul class="dropdown-menu dropdown-menu-right">');
                                 print('<li>');
                                 ?>
-                                    <a href="index.php?page=40.4&id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>">Colaborar</a>
+                                    <a href="index.php?page=40.4&id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>&usuario=<?php echo $usuario;?>">Colaborar</a>
                                 <?php
                                 print('</li>');
                                 

@@ -29,11 +29,11 @@
                                     print('<a href=index.php?page=10.3&id_trabalho='.$id.'>Editar</a>');
                                 print('</li>');
                                 print('<li>');
-                                    print('<a href=index.php?page=10.4&id_trabalho='.$id.'>Excluir</a>');
+                                    print('<a href=index.php?page=10.4&id_trabalho='.$id.'&id_usuario='.$usuario.'>Excluir</a>');
                                 print('</li>');
                                 print('<li>');
                                 ?>
-                                    <a href="index.php?page=10.5&id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>">Vizualizar Colaboração</a>
+                                    <a href="index.php?page=10.5&id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>&usuario=<?php echo $usuario; ?>">Vizualizar Colaboração</a>
                                 <?php 
                                 print('</li>');
                             print('</ul>');

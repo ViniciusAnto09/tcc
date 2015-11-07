@@ -71,9 +71,9 @@ include ('scripts/pages.php');
                             <label for="tw-switch" class="ts-helper"></label>
                         </div>
                     </li>
-                    <li id="top-search">
+                    <!-- <li id="top-search">
                         <a class="tm-search" href=""></a>
-                    </li>
+                    </li> -->
                     
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="tm-settings" href=""></a>
@@ -112,8 +112,8 @@ include ('scripts/pages.php');
                             <a href=""><i class="zmdi zmdi-layers"></i> Colaborar</a>
 
                             <ul>
-                                <li><a href="index.php?page=40.3">Fazer uma Colaboração</a></li>
                                 <li><a href="index.php?page=40">Procurar Trabalhos</a></li>
+                                <li><a href="index.php?page=40.3">Fazer uma Colaboração</a></li>
                                 <li><a href="form-components.html">Minhas Colaborações</a></li>
                             </ul>
                         </li>
@@ -131,7 +131,7 @@ include ('scripts/pages.php');
         </section>
         
         <footer id="footer">
-            Copyright &copy; 2015 Portal do TCC
+            Copyright &copy; 2015 Portal do Trabalhos Acadêmicos
         </footer>
         
         

@@ -1,65 +1,71 @@
 <div class="block-header">
     <br>
-    <h2>Painel</h2>
+    <h2>Painel informativo</h2>
     <br>
-</div>
-<div class="card">
-    <div class="card-header">
-        <h2>Sales Statistics <small>Vestibulum purus quam scelerisque, mollis nonummy metus</small></h2>
-        
-        <ul class="actions">
-            <li>
-                <a href="">
-                    <i class="zmdi zmdi-refresh-alt"></i>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="zmdi zmdi-download"></i>
-                </a>
-            </li>
-            <li class="dropdown">
-                <a href="" data-toggle="dropdown">
-                    <i class="zmdi zmdi-more-vert"></i>
-                </a>
-                
-                <ul class="dropdown-menu dropdown-menu-right">
-                    <li>
-                        <a href="">Change Date Range</a>
-                    </li>
-                    <li>
-                        <a href="">Change Graph Type</a>
-                    </li>
-                    <li>
-                        <a href="">Other Settings</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    
-    <div class="card-body">
-        <div class="chart-edge">
-            <div id="curved-line-chart" class="flot-chart "></div>
-        </div>
-    </div>
 </div>
 
 <div class="mini-charts">
     <div class="row">
         <div class="col-sm-6 col-md-3">
-            <div class="mini-charts-item bgm-cyan">
+            <div class="mini-charts-item bgm-red">
                 <div class="clearfix">
                     <div class="chart stats-bar"></div>
                     <div class="count">
-                        <small>Website Traffics</small>
-                        <h2>987,459</h2>
+                        <small>Trabalhos <br/>Cadastrados</small>
+                        <h2>6</h2>
                     </div>
                 </div>
             </div>
         </div>
-        
+    
+
+    
         <div class="col-sm-6 col-md-3">
+            <div class="mini-charts-item bgm-cyan">
+                <div class="clearfix">
+                    <div class="chart stats-bar"></div>
+                    <div class="count">
+                        <small>Colaborações<br/>Realizadas</small>
+                        <h2>98</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+    
+        <div class="col-sm-6 col-md-3">
+            <div class="mini-charts-item bgm-green">
+                <div class="clearfix">
+                    <div class="chart stats-bar"></div>
+                    <div class="count">
+                        <small>Total de <br/>Colaborações </small>
+                        <h2>350</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    
+        <div class="col-sm-8 col-md-3">
+            <div class="mini-charts-item bgm-orange">
+                <div class="clearfix">
+                    <div class="chart stats-bar"></div>
+                    <div class="count">
+                        <small>Pessoas que<br/>colaboraram</small>
+                        <h2>15</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+
+        
+        <!-- <div class="col-sm-6 col-md-3">
             <div class="mini-charts-item bgm-lightgreen">
                 <div class="clearfix">
                     <div class="chart stats-bar-2"></div>
@@ -94,11 +100,11 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div>-->
 
 
-<div class="dash-widgets">
+
+<!-- <div class="dash-widgets">
     <div class="row">
         <div class="col-md-3 col-sm-6">
             <div id="site-visits" class="dash-widget-item bgm-teal">
@@ -242,7 +248,7 @@
 
 <div class="row">
     <div class="col-sm-6">
-        <!-- Recent Items -->
+        
         <div class="card">
             <div class="card-header">
                 <h2>Recent Items <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
@@ -308,7 +314,6 @@
             <div id="recent-items-chart" class="flot-chart"></div>
         </div>
         
-        <!-- Todo Lists -->
         <div id="todo-lists">
             <div class="tl-header">
                 <h2>Todo Lists</h2>
@@ -499,10 +504,10 @@
     </div>
     
     <div class="col-sm-6">
-        <!-- Calendar -->
+        
         <div id="calendar-widget"></div>
 
-        <!-- Recent Posts -->
+       
         <div class="card">
             <div class="card-header ch-alt m-b-20">
                 <h2>Recent Posts <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
@@ -601,4 +606,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

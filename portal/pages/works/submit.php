@@ -21,7 +21,6 @@
 		return $retorno;
 	}
 
-
 	$titulo = $_POST['titulo'];
 	$descricao = $_POST['descricao'];
 	$token = geraToken(10);
@@ -30,8 +29,6 @@
 	values (null, '".$usuario."', '".$titulo."', '".$descricao."', '".$token."')";
 
 	$result = mysql_query($query);
-
-
 
 	$query = "select * from tb_trabalho where (id_usuario = '$usuario') order by id_trabalho desc limit 1 ";
 	$results = mysql_query($query);
@@ -46,9 +43,5 @@
 		if ($result){
 			print ('<script> location.href = "index.php?page=10" </script>');
 		}
-		
-		
 	}
-
-
 ?>
