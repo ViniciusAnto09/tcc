@@ -98,7 +98,7 @@ include ('scripts/pages.php');
             <aside id="sidebar">
                 <div class="sidebar-inner c-overflow">
                     <ul class="main-menu">
-                        <li class="active"><a href="index.php"><i class="zmdi zmdi-home"></i> Página Inicial</a></li>
+                        <li ><a href="index.php"><i class="zmdi zmdi-home"></i> Página Inicial</a></li>
                         <li class="sub-menu">
                             <a href=""><i class="zmdi zmdi-collection-text"></i> Meus Trabalhos</a>
 
