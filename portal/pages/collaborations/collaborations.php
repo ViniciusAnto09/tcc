@@ -21,7 +21,7 @@
         </ul>
     </div>
 
-    <table id="data-table-command" class="table table-striped table-vmiddle">
+    <table id="data-table-command" class="table table-striped table-vmiddle table-hover">
         <thead>
             <tr>
                 <th data-column-id="id" data-type="date">Data da Colaboração</th>
@@ -40,14 +40,15 @@
                 $search_query = mysql_query($sql);
                 while($select = mysql_fetch_array($search_query)){
                     $nome = $select["nome"];
-                    $descricao = substr($select["descricao"],0,98);
+                    $descricao = substr(strip_tags($select["descricao"]), 0, 80);
                     $dataCriacao = date('d/m/Y', strtotime($select["dataCriacao"]));
+                    $colaboracao = $select["id_colaboracao"];
 
                     print('<tr>');
                         print('<td>'."$dataCriacao".'</td>');
-                        print('<td>'."$descricao".'...</td>');
+                        print('<td>'."$descricao".'</td>');
                         print('<td>'."$nome".'</td>');  
-                        print('<td><center><button class="btn bgm-blue" id="visualizar"><i class="zmdi zmdi-menu"></i></button></center></td>');
+                        print('<td><a href="index.php?page=11&id_colaboracao='.$colaboracao.'" class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a></td>');
                     print('</tr>');
                 }
             ?>

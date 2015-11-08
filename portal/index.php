@@ -105,7 +105,7 @@ include ('scripts/pages.php');
                             <ul>
                                 <li><a href="index.php?page=10">Trabalhos Cadastrados</a></li>
                                 <li><a href="index.php?page=10.1">Cadastrar Trabalho</a></li>
-                                <li><a href="form-validations.html">Visualizar Colaboradores</a></li>
+                                <li><a href="index.php?page=11.1&usuario=<?php echo $_SESSION['id_usuario'];?>">Visualizar Colaboradores</a></li>
                             </ul>
                         </li>
                         <li class="sub-menu">

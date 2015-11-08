@@ -103,6 +103,24 @@
 		}
 	}
 
+	elseif($page == 11){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/works/viewColaboration.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 11.1){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/works/viewCollaborator.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
 	elseif($page == 30){
 		if ($_SESSION['valid'] == true){
 			$page = 'pages/profile/profile.php';

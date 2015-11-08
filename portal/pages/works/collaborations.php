@@ -50,10 +50,10 @@
                     if($status == "A"){
                         print('<tr class="warning">');
                             print('<td>'."$dataCriacao".'</td>');
-                            print('<td>'."$descricao".'...</td>');
+                            print('<td>'."$descricao".'</td>');
                             print('<td>'."$nome".'</td>');
                             
-                            print('<td style="width:150px;"><a class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a> 
+                            print('<td style="width:150px;"><a href="index.php?page=11&id_colaboracao='.$colaboracao.'" class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a> 
                             <a href="index.php?page=10.8&id_colaboracao='.$colaboracao.'" class="btn bgm-green m-r-5 waves-effect" id="aceitar"><i class="zmdi zmdi-check"></i></a>
                             <a href="index.php?page=10.7&id_colaboracao='.$colaboracao.'" class="btn bgm-red m-r-5 waves-effect" id="excluir"><i class="zmdi zmdi-close"></i></a></td>');
                              
@@ -62,9 +62,9 @@
                     else if($status == "O"){
                         print('<tr class="success">');
                             print('<td>'."$dataCriacao".'</td>');
-                            print('<td>'."$descricao".'...</td>');
+                            print('<td>'."$descricao".'</td>');
                             print('<td>'."$nome".'</td>'); 
-                            print('<td style="width:200px;"><a class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a>
+                            print('<td style="width:200px;"><a href="index.php?page=11&id_colaboracao='.$colaboracao.'" class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a>
                             <a href="index.php?page=10.9&id_colaboracao='.$colaboracao.'" class="btn bgm-orange waves-effect m-r-5" id="analisar"><i class="zmdi zmdi-undo"></i></a> 
                             <a href="index.php?page=10.7&id_colaboracao='.$colaboracao.'" class="btn bgm-red m-r-5 waves-effect" id="excluir"><i class="zmdi zmdi-close"></i></a></td>');                        print('</tr>');
                     }
