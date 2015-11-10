@@ -148,6 +148,15 @@
 		}
 	}
 
+	elseif($page == 30.3){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/profile/viewProfile.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
 	elseif($page == 40){
 		if ($_SESSION['valid'] == true){
 			$page = 'pages/collaborations/form_search.php';
@@ -205,6 +214,15 @@
 	elseif($page == 40.6){
 		if ($_SESSION['valid'] == true){
 			$page = 'pages/collaborations/submit.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
+	elseif($page == 40.7){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/collaborations/myContributions.php';
 		}
 		else{
 			print("<script>location.href = 'pages/login/login.php';</script>");

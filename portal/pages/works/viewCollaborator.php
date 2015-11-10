@@ -1,6 +1,5 @@
 <?php
     $idUsuario = $_GET['usuario'];
-
 ?>
 
 <div class="card">
@@ -12,27 +11,43 @@
         <thead>
             <tr>
                 <th data-column-id="received" data-order="desc">Colaborador</th>
-                <th data-column-id="commands" data-formatter="commands" data-sortable="false">Visualizar Profile</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th data-column-id="commands" data-formatter="commands" data-sortable="false">Informações</th>
             </tr>
         </thead>
         <tbody>
             <?php
                 
 
-                $sql = "select * from tb_colaboracao
+                $sql = "select tb_usuario.nome from tb_colaboracao
                             inner join tb_usuario
                             on (tb_colaboracao.id_usuario= tb_usuario.id_usuario)
-                            where (tb_colaboracao.id_usuario != $idUsuario)
-                            and (tb_usuario.id_usuario = $idUsuario)";
-                            
+                            where (tb_usuario.id_usuario != '$idUsuario')
+                            group by tb_usuario.nome";
                            
                 $search_query = mysql_query($sql);
                 while($select = mysql_fetch_array($search_query)){
                     $nome = $select["nome"];
+                    $usuario = $select["tb_usuario.id_usuario"];
 
                     print('<tr>');
                         print('<td>'."$nome".'</td>');  
-                        print('<td><a class="btn bgm-blue" id="visualizar"><i class="zmdi zmdi-eye"></i></a></td>');
+                        print('<td></td>');
+                        print('<td></td>');
+                        print('<td></td>');
+                        print('<td></td>');
+                        print('<td></td>');
+                        print('<td></td>');
+                        print('<td></td>');
+                        ?>
+                        <td style="width:150px;"><a href="index.php?page=30.3&idUsuario=<?php echo $usuario; ?>" class="btn bgm-blue" id="visualizar"><i class="zmdi zmdi-eye"></i></a></td>
+                        <?php
                     print('</tr>');
                 }
             ?>

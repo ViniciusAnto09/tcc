@@ -114,7 +114,7 @@ include ('scripts/pages.php');
                             <ul>
                                 <li><a href="index.php?page=40">Procurar Trabalhos</a></li>
                                 <li><a href="index.php?page=40.3">Fazer uma Colaboração</a></li>
-                                <li><a href="form-components.html">Minhas Colaborações</a></li>
+                                <li><a href="index.php?page=40.7&usuario=<?php echo $_SESSION['id_usuario'];?>">Minhas Colaborações</a></li>
                             </ul>
                         </li>
                         <li><a href="index.php?page=30"><i class="zmdi zmdi-assignment-account"></i> Minhas Informações</a></li>
