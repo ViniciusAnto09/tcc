@@ -25,7 +25,7 @@
             <?php
                 
 
-                $sql = "select tb_usuario.nome from tb_colaboracao
+                $sql = "select * from tb_colaboracao
                             inner join tb_usuario
                             on (tb_colaboracao.id_usuario= tb_usuario.id_usuario)
                             where (tb_usuario.id_usuario != '$idUsuario')
@@ -34,7 +34,7 @@
                 $search_query = mysql_query($sql);
                 while($select = mysql_fetch_array($search_query)){
                     $nome = $select["nome"];
-                    $usuario = $select["tb_usuario.id_usuario"];
+                    $usuario = $select["id_usuario"];
 
                     print('<tr>');
                         print('<td>'."$nome".'</td>');  
