@@ -229,6 +229,15 @@
 		}
 	}
 
+	elseif($page == 70){
+		if ($_SESSION['valid'] == true){
+			$page = 'pages/works/report.php';
+		}
+		else{
+			print("<script>location.href = 'pages/login/login.php';</script>");
+		}
+	}
+
 	elseif($page == 1000){
 		if ($_SESSION['valid'] == true){
 			session_destroy();

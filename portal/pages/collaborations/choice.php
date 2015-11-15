@@ -8,7 +8,8 @@
 		
 
 	if ($result){
-		print ('<script> javascript:window.history.go(-2) </script>');
+		// print ('<script> location.href = "index.php?page=40.4&id_trabalho='.$trabalho.'&usuario='.$usuario.'" </script>');
+		print ('<script> location.href = "index.php?page=40.3" </script>');
 	}
 	else {
 		print ('<script> alert ("FALHA AO EDITAR DADOS!"); </script>');

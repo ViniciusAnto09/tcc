@@ -8,6 +8,11 @@
     <div class="card-header">
         <h2><?php echo $nomeTrabalho; ?> </h2>
         <ul class="actions">
+            <li>
+                <a href="javascript:window.history.go(-1)">
+                    <i class="zmdi zmdi-arrow-left"></i>
+                </a>
+            </li>
             <li class="dropdown action-show">
                 <a href="" data-toggle="dropdown">
                     <i class="zmdi zmdi-more-vert"></i>
@@ -53,7 +58,7 @@
                             print('<td>'."$descricao".'</td>');
                             print('<td>'."$nome".'</td>');
                             
-                            print('<td style="width:150px;"><a href="index.php?page=11&id_colaboracao='.$colaboracao.'" class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a> 
+                            print('<td style="width:200px;"><a href="index.php?page=11&id_colaboracao='.$colaboracao.'" class="btn bgm-blue m-r-5" id="visualizar"><i class="zmdi zmdi-eye"></i></a> 
                             <a href="index.php?page=10.8&id_colaboracao='.$colaboracao.'" class="btn bgm-green m-r-5 waves-effect" id="aceitar"><i class="zmdi zmdi-check"></i></a>
                             <a href="index.php?page=10.7&id_colaboracao='.$colaboracao.'" class="btn bgm-red m-r-5 waves-effect" id="excluir"><i class="zmdi zmdi-close"></i></a></td>');
                              

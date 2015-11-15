@@ -36,6 +36,11 @@
                                     <a href="index.php?page=10.5&id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>&usuario=<?php echo $usuario; ?>">Vizualizar Colaboração</a>
                                 <?php 
                                 print('</li>');
+                                print('<li>');
+                                 ?>
+                                    <a href="pages/works/report.php?id_trabalho=<?php echo $id; ?>&trabalho=<?php echo $nomeTrabalho; ?>">Gerar Relatório</a>
+                                <?php 
+                                print('</li>');
                             print('</ul>');
                         print('</li>');
                     print('</ul>');

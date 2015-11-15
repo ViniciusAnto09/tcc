@@ -7,6 +7,13 @@
 <div class="block-header">
     <br>
     <h2>Editar Trabalho</h2>
+    <ul class="actions">
+            <li>
+                <a href="javascript:window.history.go(-1)">
+                    <i class="zmdi zmdi-arrow-left"></i>
+                </a>
+            </li>
+        </ul>
     <br>
 </div>
 

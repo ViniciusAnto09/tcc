@@ -1,24 +1,130 @@
-CREATE TABLE tb_usuarios(
-	id_usuario integer NOT NULL AUTO_INCREMENT,
-	nome VARCHAR(40) NOT NULL,
-	email VARCHAR(40) NOT NULL,
-	telefone varchar(13),
-	senha VARCHAR(40) NOT NULL,
-	bio text,
-	PRIMARY KEY (id_usuario)
-);
+-- phpMyAdmin SQL Dump
+-- version 4.1.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 14-Nov-2015 às 02:48
+-- Versão do servidor: 5.6.17
+-- PHP Version: 5.5.12
 
-CREATE TABLE tb_trabalhos(
-	id_trabalho integer NOT NULL AUTO_INCREMENT,
-	id_usuario integer NOT NULL,
-	nome varchar(100) NOT NULL,
-	descricao text NOT NULL,
-	token varchar(10) UNIQUE NOT NULL,
-	PRIMARY KEY (id_trabalho),
-	FOREIGN KEY (id_usuario) REFERENCES tb_usuarios(id_usuario)
-);
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-CREATE TABLE tb_colaboracao(
-	id_colaboracao integer NOT NULL AUTO_INCREMENT,
 
-);
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `db_portaltcc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_colaboracao`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_colaboracao` (
+  `id_colaboracao` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` text COLLATE latin1_general_ci NOT NULL,
+  `dataCriacao` datetime NOT NULL,
+  `dataAceite` datetime DEFAULT NULL,
+  `status` char(1) COLLATE latin1_general_ci NOT NULL,
+  `id_usuario` int(10) NOT NULL,
+  `id_trabalho` int(10) NOT NULL,
+  PRIMARY KEY (`id_colaboracao`),
+  KEY `FKtb_colabor667850` (`id_usuario`,`id_trabalho`),
+  FULLTEXT KEY `status` (`status`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=49 ;
+
+--
+-- Extraindo dados da tabela `tb_colaboracao`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_trabalho`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_trabalho` (
+  `id_trabalho` int(10) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(10) NOT NULL,
+  `nome` varchar(100) COLLATE latin1_general_ci NOT NULL,
+  `descricao` text COLLATE latin1_general_ci NOT NULL,
+  `token` varchar(10) COLLATE latin1_general_ci NOT NULL,
+  PRIMARY KEY (`id_trabalho`),
+  UNIQUE KEY `token` (`token`),
+  KEY `FKtb_trabalh834859` (`id_usuario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=19 ;
+
+--
+-- Extraindo dados da tabela `tb_trabalho`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_usuario` (
+  `id_usuario` int(10) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(40) COLLATE latin1_general_ci NOT NULL,
+  `email` varchar(40) COLLATE latin1_general_ci NOT NULL,
+  `telefone` varchar(15) COLLATE latin1_general_ci ,
+  `senha` varchar(40) COLLATE latin1_general_ci NOT NULL,
+  `imagem` varchar(200) COLLATE latin1_general_ci,
+  `bio` text COLLATE latin1_general_ci,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `tb_usuario`
+--
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_usuario_trabalho`
+--
+
+CREATE TABLE IF NOT EXISTS `tb_usuario_trabalho` (
+  `id_usuario` int(10) NOT NULL,
+  `id_trabalho` int(10) NOT NULL,
+  PRIMARY KEY (`id_usuario`,`id_trabalho`),
+  KEY `FKtb_usuario392215` (`id_usuario`),
+  KEY `FKtb_usuario953120` (`id_trabalho`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Extraindo dados da tabela `tb_usuario_trabalho`
+--
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `tb_colaboracao`
+--
+ALTER TABLE `tb_colaboracao`
+  ADD CONSTRAINT `FKtb_colabor667850` FOREIGN KEY (`id_usuario`, `id_trabalho`) REFERENCES `tb_usuario_trabalho` (`id_usuario`, `id_trabalho`);
+
+--
+-- Limitadores para a tabela `tb_trabalho`
+--
+ALTER TABLE `tb_trabalho`
+  ADD CONSTRAINT `FKtb_trabalh834859` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`id_usuario`);
+
+--
+-- Limitadores para a tabela `tb_usuario_trabalho`
+--
+ALTER TABLE `tb_usuario_trabalho`
+  ADD CONSTRAINT `FKtb_usuario392215` FOREIGN KEY (`id_usuario`) REFERENCES `tb_usuario` (`id_usuario`),
+  ADD CONSTRAINT `FKtb_usuario953120` FOREIGN KEY (`id_trabalho`) REFERENCES `tb_trabalho` (`id_trabalho`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
