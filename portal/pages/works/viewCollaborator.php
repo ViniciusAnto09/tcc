@@ -13,7 +13,7 @@
                 <th data-column-id="received" data-order="desc">Colaborador</th>
                 <th></th>
                 <th></th>
-                <th></th>
+                <th>Trabalho</th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -25,22 +25,28 @@
             <?php
                 
 
-                $sql = "select * from tb_colaboracao
+                $sql = "select tb_usuario.nome as nomeUsuario, tb_usuario.id_usuario as usuarioId, tb_trabalho.id_trabalho as idTrabalho, tb_trabalho.nome as nomeTrabalho from tb_usuario_trabalho
                             inner join tb_usuario
-                            on (tb_colaboracao.id_usuario= tb_usuario.id_usuario)
-                            where (tb_usuario.id_usuario != '$idUsuario')
-                            group by tb_usuario.nome";
+                            on (tb_usuario_trabalho.id_usuario= tb_usuario.id_usuario)
+                            inner join tb_trabalho
+                            on (tb_usuario_trabalho.id_trabalho = tb_trabalho.id_trabalho)
+                            where (tb_trabalho.id_usuario = '$idUsuario')
+                            and (tb_usuario_trabalho.id_usuario != '$idUsuario')
+                            group by nomeUsuario, nomeTrabalho
+                            order by tb_trabalho.id_trabalho";
                            
                 $search_query = mysql_query($sql);
                 while($select = mysql_fetch_array($search_query)){
-                    $nome = $select["nome"];
-                    $usuario = $select["id_usuario"];
+                    $nome = $select["nomeUsuario"];
+                    $nomeTrabalho = $select["nomeTrabalho"];
+                    $idTrabalho = $select["idTrabalho"];
+                    $usuario = $select["usuarioId"];
 
                     print('<tr>');
                         print('<td>'."$nome".'</td>');  
                         print('<td></td>');
                         print('<td></td>');
-                        print('<td></td>');
+                        print('<td><a href="index.php?page=10.5&id_trabalho='."$idTrabalho".'&trabalho='."$nomeTrabalho".'&usuario='."$idUsuario".'">'."$nomeTrabalho".'<a/></td>');
                         print('<td></td>');
                         print('<td></td>');
                         print('<td></td>');

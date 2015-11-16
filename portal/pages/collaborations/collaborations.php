@@ -35,7 +35,8 @@
                 $sql = "select * from tb_colaboracao
                             inner join tb_usuario
                             on (tb_colaboracao.id_usuario= tb_usuario.id_usuario)
-                            where(tb_colaboracao.id_trabalho = $id)"; 
+                            where(tb_colaboracao.id_trabalho = $id)
+                            order by dataCriacao desc";
                            
                 $search_query = mysql_query($sql);
                 while($select = mysql_fetch_array($search_query)){

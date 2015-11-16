@@ -92,12 +92,13 @@
         </div>
     
 
-        <?php
-            $query = "select count(DISTINCT tb_colaboracao.id_usuario) as qtdTrabalhos
-                      from tb_colaboracao
+       <?php
+            $query = "select count(DISTINCT tb_usuario_trabalho.id_usuario) as qtdTrabalhos
+                      from tb_usuario_trabalho
                       inner join tb_trabalho
-                      on tb_colaboracao.id_trabalho = tb_trabalho.id_trabalho
-                      where (tb_colaboracao.id_usuario != '$idUsuario')";
+                      on tb_usuario_trabalho.id_trabalho = tb_trabalho.id_trabalho
+                      where (tb_usuario_trabalho.id_usuario != '$idUsuario')
+                      and (tb_trabalho.id_usuario = '$idUsuario')";
             $results = mysql_query($query);
             $array = mysql_fetch_array($results);
             $qtdTrabalhos = $array['qtdTrabalhos'];
